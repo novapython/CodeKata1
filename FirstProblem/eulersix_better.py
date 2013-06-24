@@ -1,3 +1,7 @@
+""" This solution uses numpy to apply (x ** 2) to each
+element in the array, instead of iteration over a range
+of numbers
+"""
 import numpy as np
 
 
