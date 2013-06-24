@@ -10,7 +10,7 @@ push your abilities to be able to use the library in your everyday work
 Getting Started
 ---------------
 Please browse through the problems to get an understanding of how they are structured. You can
-start with our first problem, `FirstProblem <https://github.com/novapython/CodeKata1/FirstProblem>`_
+start with our first problem, `FirstProblem <https://github.com/novapython/CodeKata1/tree/master/FirstProblem>`_
 , to get an understanding of how the problem sets
 are laid out.
 
