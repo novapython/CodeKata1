@@ -9,9 +9,19 @@ push your abilities to be able to use the library in your everyday work
 
 Getting Started
 ---------------
+You may want to setup a Virtual Environment on your system to hold all of
+the Codekata work. Then you can easily setup your environment to being work
+on the problems:
+
+| $ cd ~/
+| $ virtualenv ~/CodeKata_env
+| $ source ~/CodeKata_env/bin/activate
+| $ git clone https://github.com/novapython/CodeKata1.git
+| $ cd CodeKata1
+| $ pip install -r requirements.txt
+
 Please browse through the problems to get an understanding of how they are structured. You can
 start with our first problem, `FirstProblem <https://github.com/novapython/CodeKata1/tree/master/FirstProblem>`_
 , to get an understanding of how the problem sets
 are laid out.
-
 
