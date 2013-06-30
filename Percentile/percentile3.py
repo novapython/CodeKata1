@@ -23,7 +23,6 @@ def percentile(observations, percentile):
     and the list does not need to be preserved"""
     obs = np.array(observations)
     rank = int(round(0.5 + len(observations) * percentile / 100.))
-    return np.percentile(obs, percentile)
     ordered_observations = np.sort(obs)
     return ordered_observations[rank - 1]
 

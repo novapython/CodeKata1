@@ -18,14 +18,24 @@ import numpy as np
 
 def percentile(observations, percentile):
     """Returns a percentile value
-
+    
     For simplicity assumes that all observations are unique
     and the list does not need to be preserved"""
-    obs = np.array(observations)
     rank = int(round(0.5 + len(observations) * percentile / 100.))
-    return np.percentile(obs, percentile)
+    obs = np.array(observations)
+    offset = 0
+    while True:
+        pivot = np.random.choice(obs, 1)
+        below_pivot = len(obs[obs <= pivot])
+        if offset + below_pivot == rank:
+            return pivot[0]
+        elif offset + below_pivot < rank:
+            obs = obs[obs > pivot]
+            offset = offset + below_pivot
+        elif offset + below_pivot > rank:
+            obs = obs[obs <= pivot]
+
 
 if __name__ == '__main__':
     import percentile_test
     percentile_test.evaluate(percentile)
-

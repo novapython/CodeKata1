@@ -14,7 +14,7 @@ def evaluate(func, timeout=30, start=0, end=8, step=10):
             iter_start = time.time()
             result = func(sample, 50)
             iter_end = time.time()
-            if result != expected:
+            if np.abs(result - expected) > 1:
                 raise Exception('Unexpected result: ', result, expected)
             times.append(iter_end - iter_start)
             if time.time() > start_time + timeout:
